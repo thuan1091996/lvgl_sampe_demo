@@ -14,6 +14,74 @@ void ui_Screen2_screen_init(void)
     lv_obj_set_x(ui_Header2, 0);
     lv_obj_set_y(ui_Header2, 0);
 
-    lv_label_set_text(ui_comp_get_child(ui_Header2, UI_COMP_HEADER_SCREENNAME), "Screen 2");
+    lv_label_set_text(ui_comp_get_child(ui_Header2, UI_COMP_HEADER_SCREENNAME), "Screen2");
+
+    ui_simulateDropdown2 = lv_obj_create(ui_Screen2);
+    lv_obj_set_width(ui_simulateDropdown2, 131);
+    lv_obj_set_height(ui_simulateDropdown2, 165);
+    lv_obj_set_x(ui_simulateDropdown2, -84);
+    lv_obj_set_y(ui_simulateDropdown2, 20);
+    lv_obj_set_align(ui_simulateDropdown2, LV_ALIGN_CENTER);
+    lv_obj_set_flex_flow(ui_simulateDropdown2, LV_FLEX_FLOW_COLUMN);
+    lv_obj_set_flex_align(ui_simulateDropdown2, LV_FLEX_ALIGN_START, LV_FLEX_ALIGN_START, LV_FLEX_ALIGN_START);
+    lv_obj_add_flag(ui_simulateDropdown2, LV_OBJ_FLAG_HIDDEN);     /// Flags
+    lv_obj_clear_flag(ui_simulateDropdown2,
+                      LV_OBJ_FLAG_CLICKABLE | LV_OBJ_FLAG_PRESS_LOCK | LV_OBJ_FLAG_CLICK_FOCUSABLE | LV_OBJ_FLAG_GESTURE_BUBBLE |
+                      LV_OBJ_FLAG_SNAPPABLE | LV_OBJ_FLAG_SCROLLABLE | LV_OBJ_FLAG_SCROLL_ELASTIC | LV_OBJ_FLAG_SCROLL_MOMENTUM |
+                      LV_OBJ_FLAG_SCROLL_CHAIN);     /// Flags
+
+    ui_btnChangeScreen4 = lv_btn_create(ui_simulateDropdown2);
+    lv_obj_set_width(ui_btnChangeScreen4, 100);
+    lv_obj_set_height(ui_btnChangeScreen4, 35);
+    lv_obj_set_x(ui_btnChangeScreen4, 0);
+    lv_obj_set_y(ui_btnChangeScreen4, -53);
+    lv_obj_set_align(ui_btnChangeScreen4, LV_ALIGN_CENTER);
+    lv_obj_add_flag(ui_btnChangeScreen4, LV_OBJ_FLAG_SCROLL_ON_FOCUS);     /// Flags
+    lv_obj_clear_flag(ui_btnChangeScreen4, LV_OBJ_FLAG_SCROLLABLE);      /// Flags
+
+    ui_btnChangeScreen5 = lv_btn_create(ui_simulateDropdown2);
+    lv_obj_set_width(ui_btnChangeScreen5, 100);
+    lv_obj_set_height(ui_btnChangeScreen5, 35);
+    lv_obj_set_x(ui_btnChangeScreen5, 0);
+    lv_obj_set_y(ui_btnChangeScreen5, -53);
+    lv_obj_set_align(ui_btnChangeScreen5, LV_ALIGN_CENTER);
+    lv_obj_add_flag(ui_btnChangeScreen5, LV_OBJ_FLAG_SCROLL_ON_FOCUS);     /// Flags
+    lv_obj_clear_flag(ui_btnChangeScreen5, LV_OBJ_FLAG_SCROLLABLE);      /// Flags
+
+    ui_btnChangeScreen6 = lv_btn_create(ui_simulateDropdown2);
+    lv_obj_set_width(ui_btnChangeScreen6, 100);
+    lv_obj_set_height(ui_btnChangeScreen6, 35);
+    lv_obj_set_x(ui_btnChangeScreen6, 0);
+    lv_obj_set_y(ui_btnChangeScreen6, -53);
+    lv_obj_set_align(ui_btnChangeScreen6, LV_ALIGN_CENTER);
+    lv_obj_add_flag(ui_btnChangeScreen6, LV_OBJ_FLAG_SCROLL_ON_FOCUS);     /// Flags
+    lv_obj_clear_flag(ui_btnChangeScreen6, LV_OBJ_FLAG_SCROLLABLE);      /// Flags
+
+    ui_SwitchList = lv_obj_create(ui_Screen2);
+    lv_obj_set_width(ui_SwitchList, 289);
+    lv_obj_set_height(ui_SwitchList, 152);
+    lv_obj_set_x(ui_SwitchList, -1);
+    lv_obj_set_y(ui_SwitchList, 20);
+    lv_obj_set_align(ui_SwitchList, LV_ALIGN_CENTER);
+    lv_obj_set_flex_flow(ui_SwitchList, LV_FLEX_FLOW_COLUMN);
+    lv_obj_set_flex_align(ui_SwitchList, LV_FLEX_ALIGN_START, LV_FLEX_ALIGN_START, LV_FLEX_ALIGN_START);
+    lv_obj_clear_flag(ui_SwitchList, LV_OBJ_FLAG_SCROLLABLE);      /// Flags
+
+    ui_LabelSw1 = ui_LabelSw_create(ui_SwitchList);
+    lv_obj_set_x(ui_LabelSw1, -32);
+    lv_obj_set_y(ui_LabelSw1, -11);
+
+    lv_textarea_set_text(ui_comp_get_child(ui_LabelSw1, UI_COMP_LABELSW_SWLABEL), "Control 1");
+
+    ui_LabelSw2 = ui_LabelSw_create(ui_SwitchList);
+    lv_obj_set_x(ui_LabelSw2, -32);
+    lv_obj_set_y(ui_LabelSw2, 1);
+
+    lv_textarea_set_text(ui_comp_get_child(ui_LabelSw2, UI_COMP_LABELSW_SWLABEL), "Control 2");
+
+    lv_obj_add_event_cb(ui_btnChangeScreen4, ui_event_btnChangeScreen4, LV_EVENT_ALL, NULL);
+    lv_obj_add_event_cb(ui_btnChangeScreen5, ui_event_btnChangeScreen5, LV_EVENT_ALL, NULL);
+    lv_obj_add_event_cb(ui_btnChangeScreen6, ui_event_btnChangeScreen6, LV_EVENT_ALL, NULL);
+    lv_obj_add_event_cb(ui_Screen2, ui_event_Screen2, LV_EVENT_ALL, NULL);
 
 }

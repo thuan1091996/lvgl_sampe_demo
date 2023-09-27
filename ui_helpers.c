@@ -123,104 +123,104 @@ void _ui_anim_callback_free_user_data(lv_anim_t * a)
     a->user_data = NULL;
 }
 
-void _ui_anim_callback_set_x(lv_anim_t * a, int32_t v)
-{
-    ui_anim_user_data_t * usr = (ui_anim_user_data_t *)a->user_data;
-    lv_obj_set_x(usr->target, v);
-}
+// void _ui_anim_callback_set_x(lv_anim_t * a, int32_t v)
+// {
+//     ui_anim_user_data_t * usr = (ui_anim_user_data_t *)a->user_data;
+//     lv_obj_set_x(usr->target, v);
+// }
 
-void _ui_anim_callback_set_y(lv_anim_t * a, int32_t v)
-{
-    ui_anim_user_data_t * usr = (ui_anim_user_data_t *)a->user_data;
-    lv_obj_set_y(usr->target, v);
-}
+// void _ui_anim_callback_set_y(lv_anim_t * a, int32_t v)
+// {
+//     ui_anim_user_data_t * usr = (ui_anim_user_data_t *)a->user_data;
+//     lv_obj_set_y(usr->target, v);
+// }
 
-void _ui_anim_callback_set_width(lv_anim_t * a, int32_t v)
-{
-    ui_anim_user_data_t * usr = (ui_anim_user_data_t *)a->user_data;
-    lv_obj_set_width(usr->target, v);
-}
+// void _ui_anim_callback_set_width(lv_anim_t * a, int32_t v)
+// {
+//     ui_anim_user_data_t * usr = (ui_anim_user_data_t *)a->user_data;
+//     lv_obj_set_width(usr->target, v);
+// }
 
-void _ui_anim_callback_set_height(lv_anim_t * a, int32_t v)
-{
-    ui_anim_user_data_t * usr = (ui_anim_user_data_t *)a->user_data;
-    lv_obj_set_height(usr->target, v);
-}
+// void _ui_anim_callback_set_height(lv_anim_t * a, int32_t v)
+// {
+//     ui_anim_user_data_t * usr = (ui_anim_user_data_t *)a->user_data;
+//     lv_obj_set_height(usr->target, v);
+// }
 
-void _ui_anim_callback_set_opacity(lv_anim_t * a, int32_t v)
-{
-    ui_anim_user_data_t * usr = (ui_anim_user_data_t *)a->user_data;
-    lv_obj_set_style_opa(usr->target, v, 0);
-}
+// void _ui_anim_callback_set_opacity(lv_anim_t * a, int32_t v)
+// {
+//     ui_anim_user_data_t * usr = (ui_anim_user_data_t *)a->user_data;
+//     lv_obj_set_style_opa(usr->target, v, 0);
+// }
 
-void _ui_anim_callback_set_image_zoom(lv_anim_t * a, int32_t v)
-{
-    ui_anim_user_data_t * usr = (ui_anim_user_data_t *)a->user_data;
-    lv_img_set_zoom(usr->target, v);
-}
+// void _ui_anim_callback_set_image_zoom(lv_anim_t * a, int32_t v)
+// {
+//     ui_anim_user_data_t * usr = (ui_anim_user_data_t *)a->user_data;
+//     lv_img_set_zoom(usr->target, v);
+// }
 
-void _ui_anim_callback_set_image_angle(lv_anim_t * a, int32_t v)
-{
-    ui_anim_user_data_t * usr = (ui_anim_user_data_t *)a->user_data;
-    lv_img_set_angle(usr->target, v);
-}
+// void _ui_anim_callback_set_image_angle(lv_anim_t * a, int32_t v)
+// {
+//     ui_anim_user_data_t * usr = (ui_anim_user_data_t *)a->user_data;
+//     lv_img_set_angle(usr->target, v);
+// }
 
-void _ui_anim_callback_set_image_frame(lv_anim_t * a, int32_t v)
-{
-    ui_anim_user_data_t * usr = (ui_anim_user_data_t *)a->user_data;
-    usr->val = v;
-    if(v < 0) v = 0;
-    if(v >= usr->imgset_size) v = usr->imgset_size - 1;
-    lv_img_set_src(usr->target, usr->imgset[v]);
-}
+// void _ui_anim_callback_set_image_frame(lv_anim_t * a, int32_t v)
+// {
+//     ui_anim_user_data_t * usr = (ui_anim_user_data_t *)a->user_data;
+//     usr->val = v;
+//     if(v < 0) v = 0;
+//     if(v >= usr->imgset_size) v = usr->imgset_size - 1;
+//     lv_img_set_src(usr->target, usr->imgset[v]);
+// }
 
-int32_t _ui_anim_callback_get_x(lv_anim_t * a)
-{
-    ui_anim_user_data_t * usr = (ui_anim_user_data_t *)a->user_data;
-    return lv_obj_get_x_aligned(usr->target);
-}
+// int32_t _ui_anim_callback_get_x(lv_anim_t * a)
+// {
+//     ui_anim_user_data_t * usr = (ui_anim_user_data_t *)a->user_data;
+//     return lv_obj_get_x_aligned(usr->target);
+// }
 
-int32_t _ui_anim_callback_get_y(lv_anim_t * a)
-{
-    ui_anim_user_data_t * usr = (ui_anim_user_data_t *)a->user_data;
-    return lv_obj_get_y_aligned(usr->target);
-}
+// int32_t _ui_anim_callback_get_y(lv_anim_t * a)
+// {
+//     ui_anim_user_data_t * usr = (ui_anim_user_data_t *)a->user_data;
+//     return lv_obj_get_y_aligned(usr->target);
+// }
 
-int32_t _ui_anim_callback_get_width(lv_anim_t * a)
-{
-    ui_anim_user_data_t * usr = (ui_anim_user_data_t *)a->user_data;
-    return lv_obj_get_width(usr->target);
-}
+// int32_t _ui_anim_callback_get_width(lv_anim_t * a)
+// {
+//     ui_anim_user_data_t * usr = (ui_anim_user_data_t *)a->user_data;
+//     return lv_obj_get_width(usr->target);
+// }
 
-int32_t _ui_anim_callback_get_height(lv_anim_t * a)
-{
-    ui_anim_user_data_t * usr = (ui_anim_user_data_t *)a->user_data;
-    return lv_obj_get_height(usr->target);
-}
+// int32_t _ui_anim_callback_get_height(lv_anim_t * a)
+// {
+//     ui_anim_user_data_t * usr = (ui_anim_user_data_t *)a->user_data;
+//     return lv_obj_get_height(usr->target);
+// }
 
-int32_t _ui_anim_callback_get_opacity(lv_anim_t * a)
-{
-    ui_anim_user_data_t * usr = (ui_anim_user_data_t *)a->user_data;
-    return lv_obj_get_style_opa(usr->target, 0);
-}
+// int32_t _ui_anim_callback_get_opacity(lv_anim_t * a)
+// {
+//     ui_anim_user_data_t * usr = (ui_anim_user_data_t *)a->user_data;
+//     return lv_obj_get_style_opa(usr->target, 0);
+// }
 
-int32_t _ui_anim_callback_get_image_zoom(lv_anim_t * a)
-{
-    ui_anim_user_data_t * usr = (ui_anim_user_data_t *)a->user_data;
-    return lv_img_get_zoom(usr->target);
-}
+// int32_t _ui_anim_callback_get_image_zoom(lv_anim_t * a)
+// {
+//     ui_anim_user_data_t * usr = (ui_anim_user_data_t *)a->user_data;
+//     return lv_img_get_zoom(usr->target);
+// }
 
-int32_t _ui_anim_callback_get_image_angle(lv_anim_t * a)
-{
-    ui_anim_user_data_t * usr = (ui_anim_user_data_t *)a->user_data;
-    return lv_img_get_angle(usr->target);
-}
+// int32_t _ui_anim_callback_get_image_angle(lv_anim_t * a)
+// {
+//     ui_anim_user_data_t * usr = (ui_anim_user_data_t *)a->user_data;
+//     return lv_img_get_angle(usr->target);
+// }
 
-int32_t _ui_anim_callback_get_image_frame(lv_anim_t * a)
-{
-    ui_anim_user_data_t * usr = (ui_anim_user_data_t *)a->user_data;
-    return usr->val;
-}
+// int32_t _ui_anim_callback_get_image_frame(lv_anim_t * a)
+// {
+//     ui_anim_user_data_t * usr = (ui_anim_user_data_t *)a->user_data;
+//     return usr->val;
+// }
 
 void _ui_arc_set_text_value(lv_obj_t * trg, lv_obj_t * src, const char * prefix, const char * postfix)
 {

@@ -3,8 +3,8 @@
 // LVGL version: 8.3.6
 // Project name: menu_practice
 
-#ifndef _UI_COMP_HEADER_H
-#define _UI_COMP_HEADER_H
+#ifndef _UI_COMP_LABELSW_H
+#define _UI_COMP_LABELSW_H
 
 #include "../ui.h"
 
@@ -12,12 +12,12 @@
 extern "C" {
 #endif
 
-// COMPONENT Header
-#define UI_COMP_HEADER_HEADER 0
-#define UI_COMP_HEADER_SCREENNAME 1
-#define UI_COMP_HEADER_MAINDROPDOWN 2
-#define _UI_COMP_HEADER_NUM 3
-lv_obj_t * ui_Header_create(lv_obj_t * comp_parent);
+// COMPONENT LabelSw
+#define UI_COMP_LABELSW_LABELSW 0
+#define UI_COMP_LABELSW_SWCONTROL 1
+#define UI_COMP_LABELSW_SWLABEL 2
+#define _UI_COMP_LABELSW_NUM 3
+lv_obj_t * ui_LabelSw_create(lv_obj_t * comp_parent);
 
 #ifdef __cplusplus
 } /*extern "C"*/

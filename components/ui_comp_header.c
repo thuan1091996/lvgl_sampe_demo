@@ -32,9 +32,21 @@ lv_obj_t * ui_Header_create(lv_obj_t * comp_parent)
     lv_obj_set_style_text_opa(cui_ScreenName, 255, LV_PART_MAIN | LV_STATE_DEFAULT);
     lv_obj_set_style_text_align(cui_ScreenName, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN | LV_STATE_DEFAULT);
 
+    lv_obj_t * cui_mainDropdown;
+    cui_mainDropdown = lv_dropdown_create(cui_Header);
+    lv_dropdown_set_options(cui_mainDropdown, "Screen 1\nScreen 2\nScreen 3");
+    lv_dropdown_set_text(cui_mainDropdown, "Options");
+    lv_obj_set_width(cui_mainDropdown, 97);
+    lv_obj_set_height(cui_mainDropdown, 30);
+    lv_obj_set_x(cui_mainDropdown, -105);
+    lv_obj_set_y(cui_mainDropdown, 0);
+    lv_obj_set_align(cui_mainDropdown, LV_ALIGN_CENTER);
+    lv_obj_add_flag(cui_mainDropdown, LV_OBJ_FLAG_SCROLL_ON_FOCUS);     /// Flags
+
     lv_obj_t ** children = lv_mem_alloc(sizeof(lv_obj_t *) * _UI_COMP_HEADER_NUM);
     children[UI_COMP_HEADER_HEADER] = cui_Header;
     children[UI_COMP_HEADER_SCREENNAME] = cui_ScreenName;
+    children[UI_COMP_HEADER_MAINDROPDOWN] = cui_mainDropdown;
     lv_obj_add_event_cb(cui_Header, get_component_child_event_cb, LV_EVENT_GET_COMP_CHILD, children);
     lv_obj_add_event_cb(cui_Header, del_component_child_event_cb, LV_EVENT_DELETE, children);
     ui_comp_Header_create_hook(cui_Header);

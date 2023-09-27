@@ -16,4 +16,50 @@ void ui_Screen3_screen_init(void)
 
     lv_label_set_text(ui_comp_get_child(ui_Header3, UI_COMP_HEADER_SCREENNAME), "Screen 3");
 
+    ui_simulateDropdown3 = lv_obj_create(ui_Screen3);
+    lv_obj_set_width(ui_simulateDropdown3, 131);
+    lv_obj_set_height(ui_simulateDropdown3, 165);
+    lv_obj_set_x(ui_simulateDropdown3, -84);
+    lv_obj_set_y(ui_simulateDropdown3, 20);
+    lv_obj_set_align(ui_simulateDropdown3, LV_ALIGN_CENTER);
+    lv_obj_set_flex_flow(ui_simulateDropdown3, LV_FLEX_FLOW_COLUMN);
+    lv_obj_set_flex_align(ui_simulateDropdown3, LV_FLEX_ALIGN_START, LV_FLEX_ALIGN_START, LV_FLEX_ALIGN_START);
+    lv_obj_add_flag(ui_simulateDropdown3, LV_OBJ_FLAG_HIDDEN);     /// Flags
+    lv_obj_clear_flag(ui_simulateDropdown3,
+                      LV_OBJ_FLAG_CLICKABLE | LV_OBJ_FLAG_PRESS_LOCK | LV_OBJ_FLAG_CLICK_FOCUSABLE | LV_OBJ_FLAG_GESTURE_BUBBLE |
+                      LV_OBJ_FLAG_SNAPPABLE | LV_OBJ_FLAG_SCROLLABLE | LV_OBJ_FLAG_SCROLL_ELASTIC | LV_OBJ_FLAG_SCROLL_MOMENTUM |
+                      LV_OBJ_FLAG_SCROLL_CHAIN);     /// Flags
+
+    ui_btnChangeScreen7 = lv_btn_create(ui_simulateDropdown3);
+    lv_obj_set_width(ui_btnChangeScreen7, 100);
+    lv_obj_set_height(ui_btnChangeScreen7, 35);
+    lv_obj_set_x(ui_btnChangeScreen7, 0);
+    lv_obj_set_y(ui_btnChangeScreen7, -53);
+    lv_obj_set_align(ui_btnChangeScreen7, LV_ALIGN_CENTER);
+    lv_obj_add_flag(ui_btnChangeScreen7, LV_OBJ_FLAG_SCROLL_ON_FOCUS);     /// Flags
+    lv_obj_clear_flag(ui_btnChangeScreen7, LV_OBJ_FLAG_SCROLLABLE);      /// Flags
+
+    ui_btnChangeScreen8 = lv_btn_create(ui_simulateDropdown3);
+    lv_obj_set_width(ui_btnChangeScreen8, 100);
+    lv_obj_set_height(ui_btnChangeScreen8, 35);
+    lv_obj_set_x(ui_btnChangeScreen8, 0);
+    lv_obj_set_y(ui_btnChangeScreen8, -53);
+    lv_obj_set_align(ui_btnChangeScreen8, LV_ALIGN_CENTER);
+    lv_obj_add_flag(ui_btnChangeScreen8, LV_OBJ_FLAG_SCROLL_ON_FOCUS);     /// Flags
+    lv_obj_clear_flag(ui_btnChangeScreen8, LV_OBJ_FLAG_SCROLLABLE);      /// Flags
+
+    ui_btnChangeScreen9 = lv_btn_create(ui_simulateDropdown3);
+    lv_obj_set_width(ui_btnChangeScreen9, 100);
+    lv_obj_set_height(ui_btnChangeScreen9, 35);
+    lv_obj_set_x(ui_btnChangeScreen9, 0);
+    lv_obj_set_y(ui_btnChangeScreen9, -53);
+    lv_obj_set_align(ui_btnChangeScreen9, LV_ALIGN_CENTER);
+    lv_obj_add_flag(ui_btnChangeScreen9, LV_OBJ_FLAG_SCROLL_ON_FOCUS);     /// Flags
+    lv_obj_clear_flag(ui_btnChangeScreen9, LV_OBJ_FLAG_SCROLLABLE);      /// Flags
+
+    lv_obj_add_event_cb(ui_btnChangeScreen7, ui_event_btnChangeScreen7, LV_EVENT_ALL, NULL);
+    lv_obj_add_event_cb(ui_btnChangeScreen8, ui_event_btnChangeScreen8, LV_EVENT_ALL, NULL);
+    lv_obj_add_event_cb(ui_btnChangeScreen9, ui_event_btnChangeScreen9, LV_EVENT_ALL, NULL);
+    lv_obj_add_event_cb(ui_Screen3, ui_event_Screen3, LV_EVENT_ALL, NULL);
+
 }

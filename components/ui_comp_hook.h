@@ -11,6 +11,8 @@ extern "C" {
 #endif
 
 void ui_comp_Header_create_hook(lv_obj_t * comp);
+void ui_comp_hideWipe_create_hook(lv_obj_t * comp);
+void ui_comp_LabelSw_create_hook(lv_obj_t * comp);
 
 #ifdef __cplusplus
 } /*extern "C"*/

@@ -3,8 +3,8 @@
 // LVGL version: 8.3.6
 // Project name: menu_practice
 
-#ifndef _UI_COMP_HEADER_H
-#define _UI_COMP_HEADER_H
+#ifndef _UI_COMP_HIDEWIPE_H
+#define _UI_COMP_HIDEWIPE_H
 
 #include "../ui.h"
 
@@ -12,12 +12,10 @@
 extern "C" {
 #endif
 
-// COMPONENT Header
-#define UI_COMP_HEADER_HEADER 0
-#define UI_COMP_HEADER_SCREENNAME 1
-#define UI_COMP_HEADER_MAINDROPDOWN 2
-#define _UI_COMP_HEADER_NUM 3
-lv_obj_t * ui_Header_create(lv_obj_t * comp_parent);
+// COMPONENT hideWipe
+#define UI_COMP_HIDEWIPE_HIDEWIPE 0
+#define _UI_COMP_HIDEWIPE_NUM 1
+lv_obj_t * ui_hideWipe_create(lv_obj_t * comp_parent);
 
 #ifdef __cplusplus
 } /*extern "C"*/
