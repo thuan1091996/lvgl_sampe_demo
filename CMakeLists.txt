@@ -12,7 +12,12 @@ SET(SOURCES components/ui_comp_header.c
     images/ui_img_657858778.c)
 
     
-
+idf_component_register(
+    SRCS 
+    "${SOURCES}"
+    INCLUDE_DIRS 
+    "."
+)
 
 add_library(ui ${SOURCES})
 
